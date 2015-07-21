@@ -36,7 +36,8 @@
     </LicenseUrl>
     <Copyright>MIT License</Copyright>
     <Tags>Fortis CSharp Defensive Functional</Tags>
-    <EmbedSourceFiles>true</EmbedSourceFiles>
+    <EmbedSourceFiles>false</EmbedSourceFiles>
+    <GenerateSymbolPackage>false</GenerateSymbolPackage>
   </PropertyGroup>
   <Import Project="$(NuProjPath)\NuProj.targets" />
 </Project>
