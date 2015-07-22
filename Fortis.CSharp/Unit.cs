@@ -8,6 +8,10 @@
 
 namespace Fortis.CSharp
 {
+    /// <summary>
+    /// The unit type.
+    /// See <a href="https://en.wikipedia.org/wiki/Unit_type">here</a>
+    /// </summary>
     public struct Unit
     {
     }

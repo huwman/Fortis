@@ -49,7 +49,9 @@ namespace Fortis.CSharp
         /// <typeparam name="TSecondArg">The type of the second argument.</typeparam>
         /// <typeparam name="TReturn">The type of the return.</typeparam>
         /// <param name="function">The function.</param>
-        /// <returns>A curried function</returns>
+        /// <returns>A curried function.</returns>
+        [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures",
+            Justification = "The design requires it")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Func<TFirstArg, Func<TSecondArg, TReturn>> Curry<TFirstArg, TSecondArg, TReturn>(
             this Func<TFirstArg, TSecondArg, TReturn> function)
@@ -68,6 +70,8 @@ namespace Fortis.CSharp
         /// <typeparam name="TReturn">The type of the return.</typeparam>
         /// <param name="function">The function.</param>
         /// <returns>A curried function</returns>
+        [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures",
+            Justification = "The design requires it")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Func<TFirstArg, Func<TSecondArg, Func<TThirdArg, TReturn>>>
             Curry<TFirstArg, TSecondArg, TThirdArg, TReturn>(
@@ -89,6 +93,8 @@ namespace Fortis.CSharp
         /// <typeparam name="TReturn">The type of the return.</typeparam>
         /// <param name="function">The function.</param>
         /// <returns>A curried function</returns>
+        [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures",
+            Justification = "The design requires it")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Func<TFirstArg, Func<TSecondArg, Func<TThirdArg, Func<TFourthArg, TReturn>>>>
             Curry<TFirstArg, TSecondArg, TThirdArg, TFourthArg, TReturn>(
@@ -112,6 +118,8 @@ namespace Fortis.CSharp
         /// <typeparam name="TReturn">The type of the return.</typeparam>
         /// <param name="function">The function.</param>
         /// <returns>A curried function</returns>
+        [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures",
+            Justification = "The design requires it")]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Func<TFirstArg, Func<TSecondArg, Func<TThirdArg, Func<TFourthArg, Func<TFifthArg, TReturn>>>>>
             Curry<TFirstArg, TSecondArg, TThirdArg, TFourthArg, TFifthArg, TReturn>(
