@@ -1,11 +1,3 @@
----
-layout: post
-category: 
-tags:
-- adaptive-dynamics
-
----
-
 ## Fortis 
 ### Code defensively, strengthen your design
 
