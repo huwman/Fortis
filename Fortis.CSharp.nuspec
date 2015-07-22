@@ -12,9 +12,4 @@
     <copyright>MIT License</copyright>
     <tags>Fortis CSharp Defensive Functional</tags>
   </metadata>
-  <files>
-    <file src="C:\projects\Fortis\Fortis.CSharp\bin\Debug\Fortis.CSharp.dll" target="lib\net45" exclude="" />
-    <file src="C:\projects\Fortis\Fortis.CSharp\bin\Debug\Fortis.CSharp.pdb" target="lib\net45" exclude="" />
-    <file src="C:\projects\Fortis\Fortis.CSharp\bin\Debug\Fortis.CSharp.xml" target="lib\net45" exclude="" />
-  </files>
 </package>
