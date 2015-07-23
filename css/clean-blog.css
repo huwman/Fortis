@@ -143,18 +143,7 @@ hr.small {
 .intro-header .page-heading {
   padding: 100px 0 50px;
   color: white;
-  
-  /* WebKit (Safari/Chrome) Only */
-  -webkit-text-stroke: 1px black;
-  
-  text-shadow:
-    3px 3px 0 #000,
-    /* Simulated effect for Firefox and Opera
-       and nice enhancement for WebKit */
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-   -1px  1px 0 #000,
-    1px  1px 0 #000;
+  text-shadow: 1px 1px #EDEDED;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
