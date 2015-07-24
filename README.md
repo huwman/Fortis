@@ -7,4 +7,4 @@
 
 ### Get started
 * Install the [Code Contracts](https://visualstudiogallery.msdn.microsoft.com/1ec7db13-3363-46c9-851f-1ce455f66970) extension for Visual Studio.
-* Read the [quick start tutorial](http://huwman.github.io/Fortis/quickstart)
+* Read the [introduction to Fortis](http://huwman.github.io/Fortis/2015/07/24/introduction.html)
