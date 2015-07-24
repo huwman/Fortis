@@ -1,3 +1,12 @@
+---
+layout:     post
+title:      "Fortis C# Introduction"
+subtitle:   "Make your code more robust by using types more effectively"
+date:       2015-07-23 12:00:00
+author:     "Huw Simpson"
+header-img: "img/post-bg.jpg"
+---
+
 # Introduction to Fortis C#
 
 > My inspiration for this library and the series of blog posts that will accompany it, is this: *I have a love-hate relationship with C#.* There are many things I love about it, but there are also a couple things that I think can do with some love. Fortunately we can design around some of the *'bad'* features and *increase the love*. This blog will show you how!
