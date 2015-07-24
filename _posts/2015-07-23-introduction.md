@@ -25,6 +25,7 @@ You can model your application is such a manner that the absence of data is repr
 
 Consider this code:
 ```csharp
+
 Person GetPersonByIdNumber(string idNumber)
 {
 	// Implementation ommitted!
@@ -38,11 +39,12 @@ void Main(object[] args)
 }
 ```
 
-Should we be checking whether the result of ```GetPersonByIdNumber``` is *null* before using it? Without knowledge of the implementation of the function we're calling, we do not know how it handles an error condition, it could return a null or it could throw an exception. The signature of the function offers no guidance in this case!
+Should we be checking whether the result of <code>GetPersonByIdNumber</code> is <code>null</code> before using it? Without knowledge of the implementation of the function we're calling, we do not know how it handles an error condition, it could return a null or it could throw an exception. The signature of the function offers no guidance in this case!
 
 What about this code?
 ```csharp
-Nullable&lt;int&gt; ConvertToInt(string s)
+
+Nullable<int> ConvertToInt(string s)
 {
 	// Implementation ommitted!
 }
@@ -55,11 +57,14 @@ void Main(object[] args)
     Console.WriteLine(p.Value);
 }
 ```
+
 Does the call to <code>Console.WriteLine(p.Value)</code> cause an exception? Yes it does, it suffers from a poor design. Exception are meant to be used for the *Truely Exceptional* conditions that arise! Like when memory can't be allocated etc. There would be little point in catching a <code>OutOfMemoryException</code>, what could you do to correct the situation? But here accessing <code>p.Value</code> throws an exception, a situation that could be avoided entirely with the correct design!
 
 Let's create our own type to model the absence of a value:
+
 ```csharp
-abstract class Option&lt;T&gt;
+
+abstract class Option<T>;
 {
 	public sealed class None // Represents an absent value.
     {
@@ -80,9 +85,11 @@ abstract class Option&lt;T&gt;
     }
 }
 ```
+
 Now lets see how we could use this in an improved design:
+
 ```csharp
-Option&lt;int&gt; ConvertToInt(string s)
+Option<int> ConvertToInt(string s)
 {
 	// Implementation omitted!
 }
@@ -90,7 +97,7 @@ Option&lt;int&gt; ConvertToInt(string s)
 void Main(object[] args)
 {
     var p = ConvertToInt("bla");
-  	var someP = p as Option&lt;int&gt;.Some;
+  	var someP = p as Option<int>.Some;
     if (someP == null)
     {
     	Console.WriteLine("Couldn't convert to int");
@@ -101,13 +108,15 @@ void Main(object[] args)
     }
 }
 ```
-Now you may say that we could have added a similar check earlier when dealing with <code>Nullable&lt;int&gt;</code> to prevent an exception, the difference here is, access to <code>Value</code> can only be achieved by casting to <code>Option&lt;int&gt;.Some</code>. We can now have the assistance of the type system and unlike <code>Nullable&lt;int&gt;</code>, <code>Option&lt;int&gt;</code> can contain any value not just value types like int!
 
-If you've been watching carefully though, you may note that we have simply deferred the null issue! Nothing prevents us from constructing an instance of <code>Option&lt;string&gt;.Some</code> with a null value for instance. This is where *Code Contracts* come in handy.
+Now you may say that we could have added a similar check earlier when dealing with <code>Nullable<int></code> to prevent an exception, the difference here is, access to <code>Value</code> can only be achieved by casting to <code>Option<int>.Some</code>. We can now have the assistance of the type system and unlike <code>Nullable<int></code>, <code>Option<int></code> can contain any value not just value types like int!
+
+If you've been watching carefully though, you may note that we have simply deferred the null issue! Nothing prevents us from constructing an instance of <code>Option<string>.Some</code> with a null value for instance. This is where *Code Contracts* come in handy.
 
 If you have already installed *Microsoft Code Contracts*, you can make the following simple change to the constructor for <code>Some</code>:
 
 ```csharp
+
 public sealed class Some // Wraps a value when it is present.
 {
 	public T Value
@@ -125,15 +134,15 @@ public sealed class Some // Wraps a value when it is present.
 }
 ```
 
-*Code Contracts* will now ensure that callers never create an instance of <code>Some</code> with a <code>null</code> value! You've seen how we can avoid the *Billion Dollar Mistake*, but it may seem like a lot of effort, perhaps we can make it easier.
+*Code Contracts* will now ensure that callers never create an instance of <code>Some</code> with a <code>null<code> value! You've seen how we can avoid the *Billion Dollar Mistake*, but it may seem like a lot of effort, perhaps we can make it easier.
 
 ### The Fortis.CSharp library
-The <code>Option&lt;T&gt;</code> class as introduced earlier along with *Code Contracts* solves the *Billion Dollar Mistake*, but there are many other desirable features that could be added. What about:
+The <code>Option<T></code> class as introduced earlier along with *Code Contracts* solves the *Billion Dollar Mistake*, but there are many other desirable features that could be added. What about:
 * Use as a dictionary key or in a hash table?
-* Composing functions that use ```Option&lt;T&gt;```?
-* Converting from <code>Nullable&lt;T&gt;</code> to <code>Option&lt;T&gt;</code> and visa-versa?
+* Composing functions that use <code>Option<T></code>?
+* Converting from <code>Nullable<T></code> to <code>Option<T></code> and visa-versa?
 
-The <code>Option&lt;T&gt;</code> type available in the [![Nuget package](https://img.shields.io/badge/nuget-Fortis%20C%23-blue.svg)](https://www.nuget.org/packages/Fortis.CSharp) package has the above mentioned features as well as others which will be discussed in future posts.
+The <code>Option<T></code> type available in the [![Nuget package](https://img.shields.io/badge/nuget-Fortis%20C%23-blue.svg)](https://www.nuget.org/packages/Fortis.CSharp) package has the above mentioned features as well as others which will be discussed in future posts.
 
 Please give it a try, and lets make programming in C# more fun and less error prone.
 
