@@ -60,7 +60,7 @@ void Main(object[] args)
 }
 ```
 
-Does the call to `Console.WriteLine(p.Value)` cause an exception? Yes it does, it suffers from a poor design. Exceptions are meant to be used for the *Truely Exceptional* conditions that arise, like when memory can't be allocated! There would be little point in catching a `OutOfMemoryException`, what could you do to correct the situation? But here accessing `p.Value` throws an exception, a situation that could be avoided entirely with the correct design!
+Does the call to `Console.WriteLine(p.Value)` cause an exception? Yes it does, it suffers from a poor design. Exceptions are meant to be used for the *Truly Exceptional* conditions that arise, like when memory can't be allocated! There would be little point in catching a `OutOfMemoryException`, what could you do to correct the situation? But here accessing `p.Value` throws an exception, a situation that could be avoided entirely with the correct design!
 
 Let's create our own types to model the absence and presence of values:
 
@@ -82,7 +82,7 @@ abstract class Option<T>;
         
         public Some(T value)
         {
-        	this.Value = value
+        	this.Value = value;
         }
     }
 }
