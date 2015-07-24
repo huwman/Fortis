@@ -43,6 +43,7 @@ void Main(object[] args)
 Should we be checking whether the result of <code>GetPersonByIdNumber</code> is <code>null</code> before using it? Without knowledge of the implementation of the function we're calling, we do not know how it handles an error condition, it could return a null or it could throw an exception. The signature of the function offers no guidance in this case!
 
 What about this code?
+
 ```csharp
 
 Nullable<int> ConvertToInt(string s)
