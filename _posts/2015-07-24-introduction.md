@@ -141,9 +141,9 @@ public sealed class Some // Wraps a value when it is present.
 
 ### The Fortis.CSharp library
 The `Option<T>` class as introduced earlier along with *Code Contracts* solves the *Billion Dollar Mistake*, but there are many other desirable features that could be added. What about:
-* Use as a dictionary key or in a hash table?
-* Composing functions that use `Option<T>`?
-* Converting from `Nullable<T>` to `Option<T>` and visa-versa?
+    * Use as a dictionary key or in a hash table?
+    * Composing functions that use `Option<T>`?
+    * Converting from `Nullable<T>` to `Option<T>` and visa-versa?
 
 The `Option<T>` type available in the [![Nuget package](https://img.shields.io/badge/nuget-Fortis%20C%23-blue.svg)](https://www.nuget.org/packages/Fortis.CSharp) package has the above mentioned features as well as others which will be discussed in future posts.
 
