@@ -24,6 +24,7 @@ Nearly every object oriented language to follow has copied this design flaw, and
 You can model your application is such a manner that the absence of data is represented by a specific type rather than the *typeless* null.
 
 Consider this code:
+
 ```csharp
 
 Person GetPersonByIdNumber(string idNumber)
@@ -109,9 +110,9 @@ void Main(object[] args)
 }
 ```
 
-Now you may say that we could have added a similar check earlier when dealing with <code>Nullable<int></code> to prevent an exception, the difference here is, access to <code>Value</code> can only be achieved by casting to <code>Option<int>.Some</code>. We can now have the assistance of the type system and unlike <code>Nullable<int></code>, <code>Option<int></code> can contain any value not just value types like int!
+Now you may say that we could have added a similar check earlier when dealing with <code>Nullable&lt;int&gt;</code> to prevent an exception, the difference here is, access to <code>Value</code> can only be achieved by casting to <code>Option&lt;int&gt;.Some</code>. We can now have the assistance of the type system and unlike <code>Nullable&lt;int&gt;</code>, <code>Option&lt;int&gt;</code> can contain any value not just value types like int!
 
-If you've been watching carefully though, you may note that we have simply deferred the null issue! Nothing prevents us from constructing an instance of <code>Option<string>.Some</code> with a null value for instance. This is where *Code Contracts* come in handy.
+If you've been watching carefully though, you may note that we have simply deferred the null issue! Nothing prevents us from constructing an instance of <code>Option&lt;string&gt;.Some</code> with a null value for instance. This is where *Code Contracts* come in handy.
 
 If you have already installed *Microsoft Code Contracts*, you can make the following simple change to the constructor for <code>Some</code>:
 
@@ -137,12 +138,12 @@ public sealed class Some // Wraps a value when it is present.
 *Code Contracts* will now ensure that callers never create an instance of <code>Some</code> with a <code>null<code> value! You've seen how we can avoid the *Billion Dollar Mistake*, but it may seem like a lot of effort, perhaps we can make it easier.
 
 ### The Fortis.CSharp library
-The <code>Option<T></code> class as introduced earlier along with *Code Contracts* solves the *Billion Dollar Mistake*, but there are many other desirable features that could be added. What about:
+The <code>Option&lt;T&gt;</code> class as introduced earlier along with *Code Contracts* solves the *Billion Dollar Mistake*, but there are many other desirable features that could be added. What about:
 * Use as a dictionary key or in a hash table?
-* Composing functions that use <code>Option<T></code>?
-* Converting from <code>Nullable<T></code> to <code>Option<T></code> and visa-versa?
+* Composing functions that use <code>Option&lt;T&gt;</code>?
+* Converting from <code>Nullable&lt;T&gt;</code> to <code>Option&lt;T&gt;</code> and visa-versa?
 
-The <code>Option<T></code> type available in the [![Nuget package](https://img.shields.io/badge/nuget-Fortis%20C%23-blue.svg)](https://www.nuget.org/packages/Fortis.CSharp) package has the above mentioned features as well as others which will be discussed in future posts.
+The <code>Option&lt;T&gt;</code> type available in the [![Nuget package](https://img.shields.io/badge/nuget-Fortis%20C%23-blue.svg)](https://www.nuget.org/packages/Fortis.CSharp) package has the above mentioned features as well as others which will be discussed in future posts.
 
 Please give it a try, and lets make programming in C# more fun and less error prone.
 
