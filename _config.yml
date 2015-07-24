@@ -1,5 +1,5 @@
 name: Fortis
-markdown: kramdown
+markdown: redcarpet
 pygments: true
 url: http://huwman.github.io/Fortis/
 paginate: 8
@@ -10,9 +10,6 @@ disqus_shortname:
 # url: http://gotchacode.com
 #Comment out url when working locally to resolve base urls correctly
 #url:
-
-kramdown:
-  input: GFM
 
 # Owner/author information
 owner:

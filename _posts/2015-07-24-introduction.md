@@ -29,12 +29,12 @@ Consider this code:
 
 Person GetPersonByIdNumber(string idNumber)
 {
-	// Implementation ommitted!
+    // Implementation ommitted!
 }
 
 void Main(object[] args)
 {
-	// Print the persons name to the console
+    // Print the persons name to the console
     var p = GetPersonByIdNumber("7910156517081");
     Console.WriteLine(String.Format("FirstName: {0}, Surname:{1}", p.FirstName, p.Surname);
 }
