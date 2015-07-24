@@ -55,7 +55,7 @@ void Main(object[] args)
     Console.WriteLine(p.Value);
 }
 ```
-Does the call to ```Console.WriteLine(p.Value)``` cause an exception? Yes it does, it suffers from a poor design. Exception are meant to be used for the *Truely Exceptional* conditions that arise! Like when memory can't be allocated etc. There would be little point in catching a ```OutOfMemoryException```, what could you do to correct the situation? But here accessing ```p.Value``` throws an exception, a situation that could be avoided entirely with the correct design!
+Does the call to <code>Console.WriteLine(p.Value)</code> cause an exception? Yes it does, it suffers from a poor design. Exception are meant to be used for the *Truely Exceptional* conditions that arise! Like when memory can't be allocated etc. There would be little point in catching a <code>OutOfMemoryException</code>, what could you do to correct the situation? But here accessing <code>p.Value</code> throws an exception, a situation that could be avoided entirely with the correct design!
 
 Let's create our own type to model the absence of a value:
 ```csharp
@@ -84,7 +84,7 @@ Now lets see how we could use this in an improved design:
 ```csharp
 Option<int> ConvertToInt(string s)
 {
-	// Implementation ommitted!
+	// Implementation omitted!
 }
 
 void Main(object[] args)
@@ -101,11 +101,11 @@ void Main(object[] args)
     }
 }
 ```
-Now you may say that we could have added a similar check earlier when dealing with ```Nullable<int>``` to prevent an exception, the difference here is, access to ```Value``` can only be achieved by casting to ```Option<int>.Some```. We can now have the assistance of the type system and unlike ```Nullable<int>```, ```Option<int>``` can contain any value not just value types like int!
+Now you may say that we could have added a similar check earlier when dealing with <code>Nullable<int></code> to prevent an exception, the difference here is, access to <code>Value</code> can only be achieved by casting to <code>Option<int>.Some</code>. We can now have the assistance of the type system and unlike <code>Nullable<int></code>, <code>Option<int></code> can contain any value not just value types like int!
 
-If you've been watching carefully though, you may note that we have simply deferred the null issue! Nothing prevents us from constructing an instance of ```Option<string>.Some``` with a null value for instance. This is where *Code Contracts* come in handy.
+If you've been watching carefully though, you may note that we have simply deferred the null issue! Nothing prevents us from constructing an instance of <code>Option<string>.Some</code> with a null value for instance. This is where *Code Contracts* come in handy.
 
-If you have already installed *Microsoft Code Contracts*, you can make the following simple change to the constructor for ```Some```:
+If you have already installed *Microsoft Code Contracts*, you can make the following simple change to the constructor for <code>Some</code>:
 
 ```csharp
 public sealed class Some // Wraps a value when it is present.
@@ -128,12 +128,12 @@ public sealed class Some // Wraps a value when it is present.
 *Code Contracts* will now ensure that callers never create an instance of ```Some``` with a ```null``` value! You've seen how we can avoid the *Billion Dollar Mistake*, but it may seem like a lot of effort, perhaps we can make it easier.
 
 ### The Fortis.CSharp library
-The ```Option<T>``` class as introduced earlier along with *Code Contracts* solves the *Billion Dollar Mistake*, but there are many other desirable features that could be added. What about:
+The <code>Option<T></code> class as introduced earlier along with *Code Contracts* solves the *Billion Dollar Mistake*, but there are many other desirable features that could be added. What about:
 * Use as a dictionary key or in a hash table?
 * Composing functions that use ```Option<T>```?
-* Converting from ```Nullable<T>``` to ```Option<T>``` and visa-versa?
+* Converting from <code>Nullable<T></code> to <code>Option<T></code> and visa-versa?
 
-The ```Option<T>``` type available in the [![Nuget package](https://img.shields.io/badge/nuget-Fortis%20C%23-blue.svg)](https://www.nuget.org/packages/Fortis.CSharp) package has the above mentioned features as well as others which will be discussed in future posts.
+The <code>Option<T></code> type available in the [![Nuget package](https://img.shields.io/badge/nuget-Fortis%20C%23-blue.svg)](https://www.nuget.org/packages/Fortis.CSharp) package has the above mentioned features as well as others which will be discussed in future posts.
 
 Please give it a try, and lets make programming in C# more fun and less error prone.
 
