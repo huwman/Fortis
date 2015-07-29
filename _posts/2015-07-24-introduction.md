@@ -6,7 +6,7 @@ date:       2015-07-24 12:00:00
 author:     "Huw Simpson"
 ---
 
-> My inspiration for this library and the series of blog posts that will accompany it, is this: *I have a love-hate relationship with C#.* There are many things I love about it, but there are also a couple things that I think can do with some love. Fortunately we can design around some of the *'bad'* features and *increase the love*. This blog will show you how!
+> My inspiration for this library and the series of blog posts that will accompany it, might be described as this: *I have a slight love-hate relationship with C#.* There are many things I love about it, but there are also a couple things that I think can do with more love. Fortunately we can design around some of the *'bad'* features and *increase the love*. This blog will show you how!
 
 ### Prerequisites
 * Install the [Code Contracts](https://visualstudiogallery.msdn.microsoft.com/1ec7db13-3363-46c9-851f-1ce455f66970) extension for Visual Studio.
