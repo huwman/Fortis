@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fortis.CSharp", "Fortis.CSharp\Fortis.CSharp.csproj", "{C9647510-287B-4FB0-8515-A86065A6F0D7}"
 EndProject
@@ -11,6 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fortis.TypeScript", "Fortis.TypeScript\Fortis.TypeScript.csproj", "{5407C082-DE28-46DE-A6AB-A21D5F6CF922}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{688661AF-1338-4528-9ADE-CDA8934F35AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TypeScript", "TypeScript", "{2EEF86B9-3AB5-48B5-8618-24B335424303}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,8 +32,17 @@ Global
 		{D4FBFA8B-9756-4DA6-86C0-6AA249F99EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4FBFA8B-9756-4DA6-86C0-6AA249F99EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4FBFA8B-9756-4DA6-86C0-6AA249F99EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5407C082-DE28-46DE-A6AB-A21D5F6CF922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5407C082-DE28-46DE-A6AB-A21D5F6CF922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5407C082-DE28-46DE-A6AB-A21D5F6CF922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5407C082-DE28-46DE-A6AB-A21D5F6CF922}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C9647510-287B-4FB0-8515-A86065A6F0D7} = {688661AF-1338-4528-9ADE-CDA8934F35AF}
+		{D4FBFA8B-9756-4DA6-86C0-6AA249F99EFF} = {688661AF-1338-4528-9ADE-CDA8934F35AF}
+		{5407C082-DE28-46DE-A6AB-A21D5F6CF922} = {2EEF86B9-3AB5-48B5-8618-24B335424303}
 	EndGlobalSection
 EndGlobal
