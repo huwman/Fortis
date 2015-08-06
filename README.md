@@ -1,5 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/iem6eyu2p1i9x0i2/branch/master?svg=true)](https://ci.appveyor.com/project/HuwSimpson/fortis/branch/master)
 [![Nuget package](https://img.shields.io/badge/nuget-Fortis%20C%23-blue.svg)](https://www.nuget.org/packages/Fortis.CSharp)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/huwman/Fortis?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 # Fortis 
 ### Code defensively, strengthen your design
 
