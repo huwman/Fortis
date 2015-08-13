@@ -18,25 +18,11 @@
     <IISExpressUseClassicPipelineMode />
     <TypeScriptEmitDecoratorMetadata>True</TypeScriptEmitDecoratorMetadata>
     <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="app.css" />
-    <Content Include="index.html" />
-    <Content Include="web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="Option.ts" />
     <TypeScriptCompile Include="Unit.ts" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="tsconfig.json" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
