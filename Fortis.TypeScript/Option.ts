@@ -3,7 +3,7 @@
 import { Unit } from "Unit";
 
 export class Option<TValue> {
-    private __80DD04AC_87D8_4891_8AF1_870B4532A226__; // makes type distinct
+    private __80DD04AC_87D8_4891_8AF1_870B4532A226__: {}; // make type distinct
 
     constructor() {
         this.__80DD04AC_87D8_4891_8AF1_870B4532A226__ = {};

@@ -231,3 +231,6 @@ $RECYCLE.BIN/
 *.lnk
 *.js
 *.map
+Fortis.TypeScript.Test/libraries/*
+Fortis.TypeScript/*.d.ts
+Fortis.TypeScript.Test/Scripts/typings/*
