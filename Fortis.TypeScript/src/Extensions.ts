@@ -36,13 +36,13 @@ Array.prototype.choose = function <TValue, TValueOut>(choice: (item: TValue) => 
     return choose(this, choice);
 }
 
-function tryParseInt(value: string, radix?:number): Option<number> {
-    let res = parseInt(value, radix);
-
+function tryParseFloat(value: string): Option<number> {
+    let res = parseFloat(value);
     return (isNaN(res)) ? Option.none<number>() : Option.ofValue<number>(res);
 }
 
-function tryParseFloat(value: string): Option<number> {
-    let res = parseFloat(value);
+function tryParseInt(value: string, radix?:number): Option<number> {
+    let res = parseInt(value, radix);
+
     return (isNaN(res)) ? Option.none<number>() : Option.ofValue<number>(res);
 }

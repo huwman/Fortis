@@ -23,7 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\Extensions.ts" />
-    <TypeScriptCompile Include="src\lib.core.d.ts" />
+    <TypeScriptCompile Include="lib.core.d.ts" />
     <TypeScriptCompile Include="src\Option.ts" />
     <TypeScriptCompile Include="src\Result.ts" />
     <TypeScriptCompile Include="src\Unit.ts" />
