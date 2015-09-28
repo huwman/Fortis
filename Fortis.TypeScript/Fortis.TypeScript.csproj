@@ -25,7 +25,9 @@
     <TypeScriptCompile Include="src\lib.core.d.ts" />
     <TypeScriptCompile Include="src\Fortis.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Fortis.TypesScript.nuspec" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>

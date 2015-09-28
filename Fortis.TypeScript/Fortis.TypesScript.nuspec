@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Fortis.TypeScript</id>
+    <version>0.1.0</version>
+    <title>Fortis.TypeScript</title>
+    <authors>Huw Simpson</authors>
+    <owners>Huw Simpson</owners>
+    <projectUrl>http://huwman.github.io/Fortis</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Code defensively, strengthen your design</description>
+    <summary>Code defensively, strengthen your design</summary>
+    <copyright>MIT License</copyright>
+    <tags>Fortis TypeScript Defensive Functional</tags>
+  </metadata>
+  <files>
+    <file src="src\fortis.js" target="lib" />
+    <file src="src\fortis.js.map" target="lib" />
+  </files>
+</package>
