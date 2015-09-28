@@ -14,6 +14,8 @@
     <tags>Fortis TypeScript Defensive Functional</tags>
   </metadata>
   <files>
-    <file src="src\fortis.*" target="lib" exclude="src\*.dll"/>
+    <file src="src\fortis.js" target="lib"/>
+    <file src="src\fortis.map.js" target="lib" />
+    <file src="src\fortis.d.ts" target="lib"/>
   </files>
 </package>
