@@ -15,7 +15,7 @@
   </metadata>
   <files>
     <file src="src\fortis.js" target="lib"/>
-    <file src="src\fortis.map.js" target="lib" />
+    <file src="src\fortis.js.map" target="lib" />
     <file src="src\fortis.d.ts" target="lib"/>
   </files>
 </package>
