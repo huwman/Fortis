@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Fortis.TypeScript</id>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <title>Fortis.TypeScript</title>
     <authors>Huw Simpson</authors>
     <owners>Huw Simpson</owners>
@@ -14,8 +14,8 @@
     <tags>Fortis TypeScript Defensive Functional</tags>
   </metadata>
   <files>
-    <file src="src\fortis.js" target="lib"/>
-    <file src="src\fortis.js.map" target="lib" />
-    <file src="src\fortis.d.ts" target="lib"/>
+    <file src="src\fortis.js" target="content/lib/fortis/"/>
+    <file src="src\fortis.js.map" target="content/lib/fortis/" />
+    <file src="src\fortis.d.ts" target="content/lib/fortis/"/>
   </files>
 </package>
