@@ -22,7 +22,7 @@
     <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="lib.core.d.ts" />
+    <TypeScriptCompile Include="src\lib.core.d.ts" />
     <TypeScriptCompile Include="src\Fortis.ts" />
   </ItemGroup>
   <ItemGroup />
