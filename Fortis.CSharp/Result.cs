@@ -132,7 +132,7 @@ namespace Fortis.CSharp
     }
 
     /// <summary>
-    /// Result type.
+    /// The result type is a type that represent error or success values.
     /// Use as a type-safe replacement for returning nulls or throwing exceptions.
     /// </summary>
     /// <typeparam name="TError">The type of the error.</typeparam>

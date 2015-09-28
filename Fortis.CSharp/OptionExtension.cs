@@ -19,7 +19,7 @@ namespace Fortis.CSharp
     public static class OptionExtension
     {
         /// <summary>
-        /// Checks whether the specified option exists, is Some.
+        /// Checks whether the specified option is Some.
         /// </summary>
         /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <param name="option">The option.</param>
@@ -33,7 +33,7 @@ namespace Fortis.CSharp
         }
 
         /// <summary>
-        /// Maps the specified option.
+        /// Applies a mapping function to the specified option.
         /// </summary>
         /// <typeparam name="TInValue">The type of the in value.</typeparam>
         /// <typeparam name="TOutValue">The type of the out value.</typeparam>
@@ -61,7 +61,7 @@ namespace Fortis.CSharp
         }
 
         /// <summary>
-        /// Defaults an option to the supplied value, when None.
+        /// Defaults to the supplied value when the specified Option is None.
         /// </summary>
         /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <param name="option">The option.</param>
@@ -153,7 +153,7 @@ namespace Fortis.CSharp
         }
 
         /// <summary>
-        /// Substitutes for the option value using the substitution functions..
+        /// Substitutes for the option value using the substitution functions.
         /// </summary>
         /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <typeparam name="TOutcome">The type of the outcome.</typeparam>

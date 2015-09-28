@@ -21,7 +21,7 @@ namespace Fortis.CSharp
     public static class Option
     {
         /// <summary>
-        /// None, represents the absence of a value.
+        /// The representation of "No value".
         /// </summary>
         /// <typeparam name="TValue">The type of the value, when Some.</typeparam>
         /// <returns>An instance of None</returns>
@@ -34,7 +34,7 @@ namespace Fortis.CSharp
         }
 
         /// <summary>
-        /// Some of TValue, wraps a value.
+        /// The representation of "Value of type TValue".
         /// </summary>
         /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <param name="value">The value.</param>
@@ -82,7 +82,7 @@ namespace Fortis.CSharp
         /// </summary>
         /// <typeparam name="TValue">The type of the value.</typeparam>
         /// <param name="callback">The callback to guard.</param>
-        /// <returns>An option of TValue.</returns>
+        /// <returns>Some of TValue when no exception occurs, otherwise None.</returns>
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Justification = "The design warrants it"),
          SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0",
              Justification = "Code contracts validates it")]
@@ -102,7 +102,7 @@ namespace Fortis.CSharp
     }
 
     /// <summary>
-    /// Option Type.
+    /// The option type is a type that represents optional values.
     /// Use as a replacement for null, to represent the presence or absence of a value.
     /// </summary>
     /// <typeparam name="TValue">The type of the value.</typeparam>
