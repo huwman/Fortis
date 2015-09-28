@@ -247,6 +247,12 @@ export module Option {
         }
     }
 
+    /**
+     * Tries to evaluate the callback and checks the output
+     * @param callback The callback to evaluate.
+     * @param check The check which evaluates the output for correctness.
+     * @returns "Some of TValue" when the check succeeds, otherwise None.
+     */
     export function tryTo<TValue>(
         callback: () => TValue,
         check: (value: TValue) => boolean): Option<TValue> {
