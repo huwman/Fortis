@@ -4,6 +4,8 @@
 # Fortis 
 ### Code defensively, strengthen your design
 
+[![Join the chat at https://gitter.im/huwman/Fortis](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/huwman/Fortis?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > This library was created with the intention of assisting C# developers to better design their code, such that nulls, null reference exceptions and unhandled exceptions are a rare occurrence. For you as a developer to achieve this, you need to change the way you model missing data and error conditions in your code.
 
 ### Get started
